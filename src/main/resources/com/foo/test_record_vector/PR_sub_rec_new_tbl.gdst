@@ -23,7 +23,7 @@
           <constraintValueType>1</constraintValueType>
           <factField>data_country</factField>
           <fieldType>String</fieldType>
-          <operator>!= null</operator>
+          <operator>==</operator>
           <parameters/>
           <binding></binding>
         </condition-column52>
@@ -42,7 +42,24 @@
       <definition>
         <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
           <factPattern>
-            <factType>PR_sub_rec_new</factType>
+            <constraintList>
+              <constraints>
+                <org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+                  <value>TEMP_DIM</value>
+                  <operator>==</operator>
+                  <constraintValueType>1</constraintValueType>
+                  <expression>
+                    <parts/>
+                    <index>2147483647</index>
+                  </expression>
+                  <parameters/>
+                  <factType>bus_dim</factType>
+                  <fieldName>dim_name</fieldName>
+                  <fieldType>String</fieldType>
+                </org.drools.workbench.models.datamodel.rule.SingleFieldConstraint>
+              </constraints>
+            </constraintList>
+            <factType>bus_dim</factType>
             <isNegated>false</isNegated>
             <window>
               <parameters/>
@@ -74,6 +91,29 @@
           <hideColumn>false</hideColumn>
           <width>100</width>
           <header>BUS_DIM_check</header>
+          <constraintValueType>1</constraintValueType>
+          <fieldType>Boolean</fieldType>
+          <parameters/>
+          <varName></varName>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+      </childColumns>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+      <hideColumn>false</hideColumn>
+      <width>-1</width>
+      <header>method_free</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
+      <definition>
+        <org.drools.workbench.models.datamodel.rule.FreeFormLine>
+          <text>sub_data_fetch()</text>
+        </org.drools.workbench.models.datamodel.rule.FreeFormLine>
+      </definition>
+      <childColumns>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
+          <hideColumn>false</hideColumn>
+          <width>100</width>
+          <header>method_free</header>
           <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
           <parameters/>
@@ -145,7 +185,12 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueBoolean>true</valueBoolean>
+        <valueString>INDIA</valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueBoolean>false</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
         <isOtherwise>false</isOtherwise>
