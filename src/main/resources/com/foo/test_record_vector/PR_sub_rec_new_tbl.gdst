@@ -41,35 +41,18 @@
       <parameters/>
       <definition>
         <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+          <factPattern>
+            <factType>PR_sub_rec_new</factType>
+            <isNegated>false</isNegated>
+            <window>
+              <parameters/>
+            </window>
+          </factPattern>
           <expression>
             <parts>
               <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
                 <next class="org.drools.workbench.models.datamodel.rule.ExpressionMethod">
                   <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
-                  <next class="org.drools.workbench.models.datamodel.rule.ExpressionMethod">
-                    <prev class="org.drools.workbench.models.datamodel.rule.ExpressionMethod" reference="../.."/>
-                    <name>compareTo</name>
-                    <classType>int</classType>
-                    <genericType>Integer</genericType>
-                    <params>
-                      <entry>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionMethodParameterDefinition>
-                          <index>0</index>
-                          <dataType>String</dataType>
-                        </org.drools.workbench.models.datamodel.rule.ExpressionMethodParameterDefinition>
-                        <org.drools.workbench.models.datamodel.rule.ExpressionFormLine>
-                          <parts>
-                            <org.drools.workbench.models.datamodel.rule.ExpressionMethodParameter>
-                              <name>&apos;TEST_DIM&apos;</name>
-                              <classType>String</classType>
-                              <genericType>String</genericType>
-                            </org.drools.workbench.models.datamodel.rule.ExpressionMethodParameter>
-                          </parts>
-                          <index>0</index>
-                        </org.drools.workbench.models.datamodel.rule.ExpressionFormLine>
-                      </entry>
-                    </params>
-                  </next>
                   <name>sub_data_fetch</name>
                   <classType>java.lang.String</classType>
                   <genericType>String</genericType>
@@ -81,7 +64,6 @@
                 <factType>PR_sub_rec_new</factType>
               </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
               <org.drools.workbench.models.datamodel.rule.ExpressionMethod reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
-              <org.drools.workbench.models.datamodel.rule.ExpressionMethod reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next/next"/>
             </parts>
             <index>2147483647</index>
           </expression>
