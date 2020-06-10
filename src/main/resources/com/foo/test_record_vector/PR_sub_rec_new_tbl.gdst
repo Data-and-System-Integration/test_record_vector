@@ -33,30 +33,88 @@
       </window>
       <entryPointName></entryPointName>
     </Pattern52>
-  </conditionPatterns>
-  <actionCols>
-    <org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
+    <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
       <hideColumn>false</hideColumn>
       <width>-1</width>
-      <header>methos_call</header>
+      <header>BUS_DIM_check</header>
+      <constraintValueType>1</constraintValueType>
+      <parameters/>
       <definition>
-        <org.drools.workbench.models.datamodel.rule.ActionCallMethod>
-          <fieldValues/>
-          <variable>data</variable>
-          <state>1</state>
-          <methodName>sub_data_fetch</methodName>
-        </org.drools.workbench.models.datamodel.rule.ActionCallMethod>
+        <org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
+          <expression>
+            <parts>
+              <org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+                <next class="org.drools.workbench.models.datamodel.rule.ExpressionMethod">
+                  <prev class="org.drools.workbench.models.datamodel.rule.ExpressionVariable" reference="../.."/>
+                  <next class="org.drools.workbench.models.datamodel.rule.ExpressionMethod">
+                    <prev class="org.drools.workbench.models.datamodel.rule.ExpressionMethod" reference="../.."/>
+                    <name>compareTo</name>
+                    <classType>int</classType>
+                    <genericType>Integer</genericType>
+                    <params>
+                      <entry>
+                        <org.drools.workbench.models.datamodel.rule.ExpressionMethodParameterDefinition>
+                          <index>0</index>
+                          <dataType>String</dataType>
+                        </org.drools.workbench.models.datamodel.rule.ExpressionMethodParameterDefinition>
+                        <org.drools.workbench.models.datamodel.rule.ExpressionFormLine>
+                          <parts>
+                            <org.drools.workbench.models.datamodel.rule.ExpressionMethodParameter>
+                              <name>&apos;TEST_DIM&apos;</name>
+                              <classType>String</classType>
+                              <genericType>String</genericType>
+                            </org.drools.workbench.models.datamodel.rule.ExpressionMethodParameter>
+                          </parts>
+                          <index>0</index>
+                        </org.drools.workbench.models.datamodel.rule.ExpressionFormLine>
+                      </entry>
+                    </params>
+                  </next>
+                  <name>sub_data_fetch</name>
+                  <classType>java.lang.String</classType>
+                  <genericType>String</genericType>
+                  <params/>
+                </next>
+                <name>data</name>
+                <classType>PR_sub_rec_new</classType>
+                <genericType>PR_sub_rec_new</genericType>
+                <factType>PR_sub_rec_new</factType>
+              </org.drools.workbench.models.datamodel.rule.ExpressionVariable>
+              <org.drools.workbench.models.datamodel.rule.ExpressionMethod reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next"/>
+              <org.drools.workbench.models.datamodel.rule.ExpressionMethod reference="../org.drools.workbench.models.datamodel.rule.ExpressionVariable/next/next"/>
+            </parts>
+            <index>2147483647</index>
+          </expression>
+        </org.drools.workbench.models.datamodel.rule.FromCompositeFactPattern>
       </definition>
       <childColumns>
-        <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
+        <org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
           <hideColumn>false</hideColumn>
           <width>100</width>
-          <header>methos_call</header>
-          <varName></varName>
+          <header>BUS_DIM_check</header>
+          <constraintValueType>1</constraintValueType>
           <fieldType>Boolean</fieldType>
-        </org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
+          <parameters/>
+          <varName></varName>
+        </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionVariableColumn>
       </childColumns>
-    </org.drools.workbench.models.guided.dtable.shared.model.BRLActionColumn>
+    </org.drools.workbench.models.guided.dtable.shared.model.BRLConditionColumn>
+  </conditionPatterns>
+  <actionCols>
+    <set-field-col52>
+      <typedDefaultValue>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </typedDefaultValue>
+      <hideColumn>false</hideColumn>
+      <width>100</width>
+      <header>BUSINESS</header>
+      <boundName>data</boundName>
+      <factField>data_business</factField>
+      <type>String</type>
+      <update>false</update>
+    </set-field-col52>
   </actionCols>
   <auditLog>
     <filter class="org.drools.guvnor.client.modeldriven.dt52.auditlog.DecisionTableAuditLogFilter">
@@ -114,6 +172,11 @@
         <valueBoolean>true</valueBoolean>
         <valueString></valueString>
         <dataType>BOOLEAN</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString>CNS</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
     </list>
