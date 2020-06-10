@@ -6,12 +6,49 @@ package com.foo.test_record_vector;
 
 public class bus_dim implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+  
+  
+	static final long serialVersionUID = 1L;
 
-    public bus_dim() {
-    }
+    private java.lang.String dim_name;
+	private java.lang.Long dim_levels__level_0;
+	private java.lang.Long dim_levels__level_1;
+	private java.lang.Long dim_levels__level_2;
+	
 
+	public bus_dim() {
+	}
 
+	public java.lang.String getDim_name() {
+		return this.dim_name;
+	}
 
+	public void setDim_name(java.lang.String dim_name) {
+		this.dim_name = dim_name;
+	}
+	
+	public java.lang.Long getDim_levels__level_0() {
+		return this.dim_levels__level_0;
+	}
+
+	public void setDim_levels__level_0(java.lang.Long dim_levels__level_0) {
+		this.dim_levels__level_0 = dim_levels__level_0;
+	}
+
+	public java.lang.Long getDim_levels__level_1() {
+		return this.dim_levels__level_1;
+	}
+
+	public void setDim_levels__level_1(java.lang.Long dim_levels__level_1) {
+		this.dim_levels__level_1 = dim_levels__level_1;
+	}
+
+	public java.lang.Long getDim_levels__level_2() {
+		return this.dim_levels__level_2;
+	}
+
+	public void setDim_levels__level_2(java.lang.Long dim_levels__level_2) {
+		this.dim_levels__level_2 = dim_levels__level_2;
+	}
 
 }
